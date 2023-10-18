@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.grid {
+    width: 16px;
+    height: 16px;
+    border: 1px solid pink;
+    background-color: black;
+}
+
+
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    
+}
