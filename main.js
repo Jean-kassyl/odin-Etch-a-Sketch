@@ -13,4 +13,11 @@ function create_grid(){
 create_grid()
 
 const grids = document.querySelectorAll('.grid');
-console.log(grids);
+grids.forEach(grid => {
+    grid.addEventListener("mouseenter", handleBackground)
+})
+
+function handleBackground(e) {
+    let target = e.target;
+    target.style.backgroundColor = "black"
+}

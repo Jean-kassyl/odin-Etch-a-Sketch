@@ -8,13 +8,13 @@ body {
     display: grid;
     min-height: 100vh;
     place-items: center;
+    background-color: whitesmoke;
 }
 
 .grid {
     width: 16px;
     height: 16px;
-    border: 1px solid pink;
-    background-color: black;
+    background-color: white;
 }
 
 
