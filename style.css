@@ -5,22 +5,37 @@
 }
 
 body {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    place-items: center;
+    align-items: center;
+    justify-content: center;
     background-color: whitesmoke;
+    gap: 40px;
 }
 
 .grid {
-    width: 16px;
-    height: 16px;
     background-color: white;
 }
 
 
 
 #container {
+    width: 500px;
+    height: 500px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
     
+}
+
+#popup_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#popup_container > input[type="range"] {
+    accent-color: #444;
 }
