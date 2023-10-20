@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <h1>Etch a sketch</h1>
+    </nav>
     <div id="popup_container">
         <label for="range_number" ><span class="range_label"></span> &#10060; <span class="range_label"></span></label>
         <input type="range" min="1" max="64" id="range_number" value="16">
@@ -16,10 +19,14 @@
     </div>
 
     <div id="controls">
-        <input type="color" value="#000" class="color_pick">
-        <button class="btn color_mode">Color mode</button>
+        <button class="btn black_mode">Black mode</button>
+        <button class="btn rainbow_mode">Rainbow mode</button>
         <button class="btn clear">Clear</button>
     </div>
+
+    <footer>
+        <h2>Made by kassyl, 2023</h2>
+    </footer>
 
     <script src="main.js"></script>
 </body>
