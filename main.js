@@ -1,6 +1,19 @@
-
+let container = document.getElementById("container")
 const range_input = document.getElementById("range_number")
 const range_label = document.querySelectorAll(".range_label")
+const clear = document.querySelector(".clear")
+
+
+
+clear.addEventListener("click", clearGrid)
+
+function clearGrid() {
+    let grids = document.querySelectorAll(".grid")
+    grids.forEach(grid => {
+        grid.style.backgroundColor = ""
+    })
+}
+
 
 
 function generate_grid(size){
@@ -8,7 +21,6 @@ function generate_grid(size){
         for(let j = 1; j <= size; j++){
             let div = document.createElement('div');
             div.setAttribute("class", "grid");
-            let container = document.getElementById("container")
             container.appendChild(div)
         }
     }
@@ -21,7 +33,7 @@ function create_grid(s = 16){
         label.textContent = s
     })
 
-    let container = document.getElementById("container")
+    
     if (container.children.length > 0){
     Array.from(container.children).forEach(div => div.remove())
 }
@@ -46,8 +58,10 @@ create_grid()
 
 
 function handleBackground(e) {
+    const colorWheel = Math.floor(Math.random() * 360) + 1
     let target = e.currentTarget;
-    target.style.backgroundColor = "black"
+    target.style.backgroundColor = `hsl(${colorWheel}, 100%, 0%)`
+    console.log(colorWheel)
 }
 
 

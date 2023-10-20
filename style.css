@@ -12,6 +12,7 @@ body {
     justify-content: center;
     background-color: whitesmoke;
     gap: 40px;
+    position: relative;
 }
 
 .grid {
@@ -39,4 +40,35 @@ body {
 
 #popup_container > input[type="range"] {
     accent-color: #444;
+}
+
+#controls {
+    position: absolute;
+    right: 15vw;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn {
+    padding: 12px 22px;
+    font-size: 1.1rem;
+}
+
+.btn.clear {
+    background-color: red;
+    color: wheat;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0.12rem 0.134rem 0.22rem rgba(0,0,0, 0.6);
+}
+
+input[type="color"] {
+    appearance: none;
+    border: none;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
